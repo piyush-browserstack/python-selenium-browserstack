@@ -28,7 +28,7 @@ def test_add_to_cart(driver):
         driver.get('https://bstackdemo.com/')
         
         # Wait for the page title to contain 'StackDemo'
-        WebDriverWait(driver, 10).until(EC.title_contains('StackDemo'))
+        WebDriverWait(driver, 30).until(EC.title_contains('StackDemo'))
         
         # Get the text of the product - iPhone 12
         item_on_page = WebDriverWait(driver, 10).until(
@@ -36,17 +36,17 @@ def test_add_to_cart(driver):
         ).text
         
         # Click the 'Add to cart' button if it is visible
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 30).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="1"]/div[4]'))
         ).click()
         
         # Check if the Cart pane is visible
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 30).until(
             EC.visibility_of_element_located((By.CLASS_NAME, 'float-cart__content'))
         )
         
         # Get the text of the product in the cart
-        item_in_cart = WebDriverWait(driver, 10).until(
+        item_in_cart = WebDriverWait(driver, 30).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="__next"]/div/div/div[2]/div[2]/div[2]/div/div[3]/p[1]'))
         ).text
         
