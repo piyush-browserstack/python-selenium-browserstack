@@ -6,6 +6,9 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 
+
+
+
 # The webdriver management will be handled by the browserstack-sdk
 # so this will be overridden and tests will run browserstack -
 # without any changes to the test files!

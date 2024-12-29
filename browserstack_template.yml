@@ -1,5 +1,5 @@
-userName: piyushhatwalne_0KJM5f
-accessKey: xxxBWyxhJ1UNwurUzHvVZxW
+userName: ${BROWSERSTACK_USERNAME}
+accessKey: ${BROWSERSTACK_ACCESS_KEY}
 platforms:
   - os: Windows
     osVersion: 10
