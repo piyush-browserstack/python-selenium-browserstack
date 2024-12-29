@@ -16,3 +16,6 @@ platforms:
 browserstackLocal: true
 buildName: browserstack-build-1
 projectName: BrowserStack Sample
+percy: true
+percyCaptureMode: auto
+
