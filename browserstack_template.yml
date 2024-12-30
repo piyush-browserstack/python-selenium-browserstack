@@ -18,4 +18,4 @@ buildName: browserstack-build-1
 projectName: BrowserStack Sample
 percy: true
 percyCaptureMode: auto
-
+accessibility: true
