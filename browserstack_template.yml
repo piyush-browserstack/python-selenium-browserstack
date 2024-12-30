@@ -1,5 +1,6 @@
 userName: ${BROWSERSTACK_USERNAME}
 accessKey: ${BROWSERSTACK_ACCESS_KEY}
+framework: pytest
 platforms:
   - os: Windows
     osVersion: 10
