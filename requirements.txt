@@ -3,3 +3,4 @@ selenium
 browserstack-sdk
 pytest
 python-dotenv
+percy-selenium
