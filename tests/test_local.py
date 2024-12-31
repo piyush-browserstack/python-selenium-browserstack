@@ -29,7 +29,7 @@ def test_add_to_cart(driver):
         
         # Wait for the page title to contain 'StackDemo'
         WebDriverWait(driver, 30).until(EC.title_contains('StackDemo'))
-        
+        PercySDK.screenshot(driver, "page1")
         # Get the text of the product - iPhone 12
         item_on_page = WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="1"]/p'))
@@ -44,7 +44,7 @@ def test_add_to_cart(driver):
         WebDriverWait(driver, 30).until(
             EC.visibility_of_element_located((By.CLASS_NAME, 'float-cart__content'))
         )
-        
+        PercySDK.screenshot(driver, "page2")
         # Get the text of the product in the cart
         item_in_cart = WebDriverWait(driver, 30).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="__next"]/div/div/div[2]/div[2]/div[2]/div/div[3]/p[1]'))
