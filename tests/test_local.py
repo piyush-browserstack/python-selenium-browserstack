@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from percy import percy_snapshot
 
 # Define a pytest fixture for the WebDriver setup and teardown
 @pytest.fixture(params=["chrome", "firefox", "safari"], scope="function")
@@ -29,7 +30,7 @@ def test_add_to_cart(driver):
         
         # Wait for the page title to contain 'StackDemo'
         WebDriverWait(driver, 30).until(EC.title_contains('StackDemo'))
-        PercySDK.screenshot(driver, "page1")
+        percy_snapshot(driver, 'page1')
         # Get the text of the product - iPhone 12
         item_on_page = WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="1"]/p'))
@@ -44,7 +45,7 @@ def test_add_to_cart(driver):
         WebDriverWait(driver, 30).until(
             EC.visibility_of_element_located((By.CLASS_NAME, 'float-cart__content'))
         )
-        PercySDK.screenshot(driver, "page2")
+        percy_snapshot(driver, 'page2')
         # Get the text of the product in the cart
         item_in_cart = WebDriverWait(driver, 30).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="__next"]/div/div/div[2]/div[2]/div[2]/div/div[3]/p[1]'))
