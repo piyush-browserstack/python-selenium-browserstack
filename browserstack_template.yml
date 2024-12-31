@@ -8,7 +8,7 @@ platforms:
     browserVersion: 120.0
 browserstackLocal: true
 buildName: browserstack-build-1
-projectName: BrowserStack Sample
+projectName: Piyush-onboarding-percy-test
 percy: true
 percyCaptureMode: auto
 accessibility: true
